@@ -1,0 +1,35 @@
+{
+  "name": "cover-eslint-config",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --flag unstable_ts_config --fix"
+  },
+  "peerDependencies": {
+    "eslint": "^9.10.0"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^3.10.0"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin-migrate": "^2.11.0",
+    "cover-cli": "^0.3.0",
+    "jiti": "^2.4.0",
+    "lint-staged": "^15.2.10",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.7.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "npx cover check --commit-msg"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --flag unstable_ts_config --fix"
+    ]
+  }
+}
