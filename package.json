@@ -1,12 +1,31 @@
 {
-  "name": "cover-eslint-config",
+  "name": "@lakyjs/eslint-config",
   "version": "0.0.0",
   "description": "",
-  "author": "",
+  "author": {
+    "name": "hacxy",
+    "email": "hacxy.js@outlook.com"
+  },
   "license": "MIT",
-  "keywords": [],
-  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "eslint-config"
+  ],
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./vue": "./dist/vue.mjs",
+    "./nestjs": "./dist/nestjs.mjs",
+    "./cli": "./dist/cli.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
     "lint": "eslint --flag unstable_ts_config --fix"
   },
   "peerDependencies": {
@@ -16,16 +35,16 @@
     "@antfu/eslint-config": "^3.10.0"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin-migrate": "^2.11.0",
-    "cover-cli": "^0.3.0",
     "jiti": "^2.4.0",
+    "laky": "^0.3.3",
     "lint-staged": "^15.2.10",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "unbuild": "^2.0.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
-    "commit-msg": "npx cover check --commit-msg"
+    "commit-msg": "npx laky check --commit-msg"
   },
   "lint-staged": {
     "*": [
