@@ -1,6 +1,6 @@
-import type { Rules } from '@antfu/eslint-config'
+import type { Rules } from '@antfu/eslint-config';
 
-export const commonRules = {
+export const CommonRules = {
   // 圈复杂度最大为 15
   'complexity': [2, { max: 15 }],
   // 要求使用 === 而不是 ==
@@ -43,4 +43,4 @@ export const commonRules = {
   'style/linebreak-style': [2, 'unix'],
   // 允许无限禁用规则，设置为 0 表示关闭此规则
   'eslint-comments/no-unlimited-disable': 0,
-} as Rules
+} as Rules;

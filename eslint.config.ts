@@ -1,4 +1,4 @@
-import linter from './src'
+import linter from './src';
 
 export default linter(
   {
@@ -10,4 +10,4 @@ export default linter(
       'style/quotes': [2, 'single'],
     },
   },
-)
+);

@@ -1,10 +1,12 @@
-import baseLinter from '@antfu/eslint-config'
-import { commonRules } from './commonRules'
+import baseLinter from '@antfu/eslint-config';
+import { CliRules } from './rules/cli';
+import { CommonRules } from './rules/common';
 
 export const linter: typeof baseLinter = (options, ...userConfig) =>
   baseLinter({
     rules: {
-      ...commonRules,
+      ...CommonRules,
+      ...CliRules,
     },
     ...options,
-  }, ...userConfig)
+  }, ...userConfig);

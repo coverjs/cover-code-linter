@@ -1,15 +1,15 @@
 import baseLinter from '@antfu/eslint-config';
 import { CommonRules } from './rules/common';
+import { NestjsRules } from './rules/nestjs';
 
-const linter: typeof baseLinter = (options, ...userConfig) => {
-  return baseLinter({
+export const linter: typeof baseLinter = (options, ...userConfig) =>
+  baseLinter({
     typescript: true,
+    vue: false,
     yaml: false,
     rules: {
       ...CommonRules,
+      ...NestjsRules,
     },
-    ...options
+    ...options,
   }, ...userConfig);
-};
-
-export default linter;
