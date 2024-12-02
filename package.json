@@ -70,5 +70,9 @@
     "*": [
       "eslint --flag unstable_ts_config --fix"
     ]
+  },
+  "np": {
+    "branch": "release",
+    "contents": "dist"
   }
 }
