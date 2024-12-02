@@ -40,7 +40,7 @@
     "dev": "tsup --format esm,cjs --watch",
     "build": "tsup --format esm,cjs --clean",
     "lint": "eslint --flag unstable_ts_config --fix",
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "npm run build",
     "test": "vitest run",
     "release": "np",
     "prepare": "simple-git-hooks"

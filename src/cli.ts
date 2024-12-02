@@ -2,7 +2,7 @@ import baseLinter from '@antfu/eslint-config';
 import { CliRules } from './rules/cli';
 import { CommonRules } from './rules/common';
 
-export const linter: typeof baseLinter = (options, ...userConfig) => {
+const linter: typeof baseLinter = (options, ...userConfig) => {
   return baseLinter({
     typescript: true,
     ...options,
@@ -14,3 +14,4 @@ export const linter: typeof baseLinter = (options, ...userConfig) => {
   }, ...userConfig);
 };
 
+export default linter;
