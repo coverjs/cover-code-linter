@@ -1,3 +1,2 @@
-# cover-eslint-config
+# Lakyjs Eslint config
 
-Coverjs eslint 配置仓库
