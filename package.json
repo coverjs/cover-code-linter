@@ -72,7 +72,7 @@
     ]
   },
   "np": {
-    "branch": "release",
     "contents": "dist"
   }
+
 }
