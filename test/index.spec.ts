@@ -1,4 +1,3 @@
-import type antfu from '@antfu/eslint-config';
 import linter from 'dist/index';
 import nestjsLinter from 'dist/nestjs';
 import { assertType, expectTypeOf, it } from 'vitest';
