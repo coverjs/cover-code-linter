@@ -4,11 +4,11 @@ import { CommonRules } from './rules/common';
 const linter: typeof baseLinter = (options, ...userConfig) => {
   return baseLinter({
     typescript: true,
-    yaml: false,
+    ...options,
     rules: {
       ...CommonRules,
+      ...options?.rules,
     },
-    ...options
   }, ...userConfig);
 };
 

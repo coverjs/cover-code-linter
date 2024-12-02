@@ -1,5 +1,6 @@
 {
   "name": "@lakyjs/eslint-config",
+  "type": "module",
   "version": "0.0.0",
   "description": "",
   "author": {
@@ -14,19 +15,35 @@
     "eslint-config"
   ],
   "exports": {
-    ".": "./dist/index.mjs",
-    "./vue": "./dist/vue.mjs",
-    "./nestjs": "./dist/nestjs.mjs",
-    "./cli": "./dist/cli.mjs"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./vue": {
+      "import": "./dist/vue.js",
+      "require": "./dist/vue.cjs"
+    },
+    "./nestjs": {
+      "import": "./dist/nestjs.js",
+      "require": "./dist/nestjs.cjs"
+    },
+    "./cli": {
+      "import": "./dist/cli.js",
+      "require": "./dist/cli.cjs"
+    }
   },
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "unbuild --stub",
-    "build": "unbuild",
-    "lint": "eslint --flag unstable_ts_config --fix"
+    "dev": "tsup --format esm,cjs --watch",
+    "build": "tsup --format esm,cjs --clean",
+    "lint": "eslint --flag unstable_ts_config --fix",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "release": "np",
+    "prepare": "simple-git-hooks"
   },
   "peerDependencies": {
     "eslint": "^9.10.0"
@@ -38,9 +55,12 @@
     "jiti": "^2.4.0",
     "laky": "^0.3.3",
     "lint-staged": "^15.2.10",
+    "np": "^10.1.0",
     "simple-git-hooks": "^2.11.1",
+    "tsup": "^8.3.5",
     "typescript": "^5.7.2",
-    "unbuild": "^2.0.0"
+    "unbuild": "^2.0.0",
+    "vitest": "^2.1.6"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
