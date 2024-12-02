@@ -39,9 +39,11 @@
   "scripts": {
     "dev": "tsup --format esm,cjs --watch",
     "build": "tsup --format esm,cjs --clean",
-    "lint": "eslint --flag unstable_ts_config .",
+    "lint": "eslint --flag unstable_ts_config --fix",
+    "prepublishOnly": "pnpm build",
     "test": "vitest run",
-    "release": "np"
+    "release": "np",
+    "prepare": "simple-git-hooks"
   },
   "peerDependencies": {
     "eslint": "^9.10.0"
