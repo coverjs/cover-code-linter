@@ -1,3 +1,9 @@
 import linter from './src';
 
-export default linter();
+export default linter(
+  {
+    rules: {
+      'no-console': 'off'
+    }
+  }
+);
