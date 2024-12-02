@@ -1,3 +1,9 @@
-# cover-eslint-config
+# Lakyjs Eslint config
 
-Coverjs eslint 配置仓库
+## Usage
+
+``` sh
+npm install --save-dev @lakyjs/eslint-config
+```
+
+Create `eslint-config.js` or `eslint-config.mjs` file in your project root:
