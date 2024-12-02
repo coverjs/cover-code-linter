@@ -72,7 +72,6 @@
     ]
   },
   "np": {
-    "contents": "dist",
     "message": "chore: release v%s"
   }
 }
