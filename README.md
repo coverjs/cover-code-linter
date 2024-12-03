@@ -27,3 +27,9 @@ export default linter();
 import linter from '@lakyjs/eslint-config/nestjs';
 export default linter();
 ```
+
+### Cli Rules
+```js
+import linter from '@lakyjs/eslint-config/cli';
+export default linter();
+```
