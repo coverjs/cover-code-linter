@@ -13,6 +13,11 @@ Edit eslint config:
 ### Common Rules
 ```js
 import linter from '@lakyjs/eslint-config';
+export default linter();
+```
 
+### Vue Rules
+```js
+import linter from '@lakyjs/eslint-config/vue';
 export default linter();
 ```
