@@ -21,3 +21,9 @@ export default linter();
 import linter from '@lakyjs/eslint-config/vue';
 export default linter();
 ```
+
+### Nestjs Rules
+```js
+import linter from '@lakyjs/eslint-config/nestjs';
+export default linter();
+```
