@@ -19,17 +19,23 @@ export default linter();
 ### Vue Rules
 ```js
 import linter from '@lakyjs/eslint-config/vue';
-export default linter();
+export default linter({
+  // ...config
+});
 ```
 
 ### Nestjs Rules
 ```js
 import linter from '@lakyjs/eslint-config/nestjs';
-export default linter();
+export default linter({
+  // ...config
+});
 ```
 
 ### Cli Rules
 ```js
 import linter from '@lakyjs/eslint-config/cli';
-export default linter();
+export default linter({
+  // ...config
+});
 ```
