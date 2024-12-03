@@ -10,6 +10,7 @@ Create `eslint-config.js` or `eslint-config.mjs` file in your project root.
 
 Edit eslint config:
 
+### Common Rules
 ```js
 import linter from '@lakyjs/eslint-config';
 
